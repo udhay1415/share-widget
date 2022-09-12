@@ -1,0 +1,31 @@
+@import "../base.scss";
+
+.pill {
+  height: 2.4rem;
+  font-family: $primary-font-family;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  padding: 0rem 0.8rem;
+  display: flex;
+  align-self: center;
+  margin: 0 0.4rem;
+  overflow: hidden;
+  max-width: 20rem;
+  min-width: 10rem;
+  justify-content: space-between;
+  align-items: center;
+
+  &-close {
+    border: none;
+    width: 2rem;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &-icon {
+      width: 1rem;
+    }
+  }
+}
