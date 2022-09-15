@@ -31,7 +31,7 @@ const Dropdown = ({ selectedPermission, setPermission }: ComponentTypes) => {
 
   return (
     <div style={{  }} className="dropdown">
-      <select name="permissions" id="permissions" className="dropdown-select" onChange={(e) => setPermission(e.target.value)} value={selectedPermission}>
+      <select name="permissions" className="dropdown__select" onChange={(e) => setPermission(e.target.value)} value={selectedPermission}>
         {
           permissions.map(p => <option key={p.id} value={p.value}>{p.value}</option>)
         }

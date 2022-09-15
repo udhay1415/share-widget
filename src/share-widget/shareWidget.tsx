@@ -3,7 +3,6 @@ import PropTypes, { InferProps } from "prop-types";
 import Popup from "../popup";
 import Button from "../button";
 import "../index.css";
-import './style.scss';
 
 const ComponentPropTypes = {
   title: PropTypes.string.isRequired,

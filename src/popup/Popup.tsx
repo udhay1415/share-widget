@@ -133,26 +133,26 @@ const Popup = ({ isShareActive, headerTitle, headerDescription, bodyTitle, bodyD
   }
 
   return (
-    <div onKeyDown={(e) => console.log(e)}>
+    <div>
       {
         isShareActive ? (
           <div className="popup">
             {
               !isSearchActive ? (
-                <div className="popup-header">
-                  <div className="popup-header--c1">
+                <div className="popup__header">
+                  <div className="popup__header-c1">
                     <img src={require('../../assets/globe.svg')} width="32px"/>
                   </div>
-                  <div className="popup-header--c2">
-                    <p className="popup-header--c2-title">{headerTitle}</p>
-                    <p className="popup-header--c2-description">{headerDescription}</p>
+                  <div className="popup__header-c2">
+                    <p className="popup__header-c2-title">{headerTitle}</p>
+                    <p className="popup__header-c2-description">{headerDescription}</p>
                   </div>
-                  <div className="popup-header--c3">
+                  <div className="popup__header-c3">
                   </div>
                 </div>
               ): null
             }
-            {!isSearchActive ? <hr className="popup-header-line"/> : null}
+            {!isSearchActive ? <hr className="popup__header-line"/> : null}
             <div className="input">
               {
                 selectedEntity.map(entity => <Pill title={entity.name} selectedEntity={selectedEntity} setSelectedEntity={setSelectedEntity} />)
@@ -173,15 +173,15 @@ const Popup = ({ isShareActive, headerTitle, headerDescription, bodyTitle, bodyD
             {
               !isSearchActive ? (
                 entityWithAccess.map(entity => (
-                  <div className="popup-header">
-                    <div className="popup-header--c1">
+                  <div className="popup__header">
+                    <div className="popup__header-c1">
                       <img src={entity.dp} width="32px" />
                     </div>
-                    <div className="popup-header--c2">
-                      <p className="popup-header--c2-title">{entity.title}</p>
-                      <p className="popup-header--c2-description">{entity.desc}</p>
+                    <div className="popup__header-c2">
+                      <p className="popup__header-c2-title">{entity.title}</p>
+                      <p className="popup__header-c2-description">{entity.desc}</p>
                     </div>
-                    <div className="popup-header--c3">
+                    <div className="popup__header--c3">
                       <Dropdown selectedPermission={entity.access} setPermission={setPermission} />
                     </div>
                   </div>
@@ -191,16 +191,16 @@ const Popup = ({ isShareActive, headerTitle, headerDescription, bodyTitle, bodyD
             {
               isSearchActive ? (
                 <div className="search-modal">
-                  <div className="search-modal-person">
+                  <div className="search-modal__person">
                     {
                       people.length > 0 ? (
                         <>
-                          <p className="search-modal-person-title">Select a person</p>
+                          <p className="search-modal__person__title">Select a person</p>
                           {
                             people.map(p => (
-                              <div className={people.length == 1 && group.length == 0 ? "search-modal-person-desc search-modal-person-desc--active" : "search-modal-person-desc"}>
-                                <img className="search-modal-person-desc-c1" src={p.dp} />
-                                <p className="search-modal-person-desc-c2">{p.name}</p>
+                              <div className={people.length == 1 && group.length == 0 ? "search-modal__person__desc search-modal__person__desc--active" : "search-modal__person__desc"}>
+                                <img className="search-modal__person__desc-c1" src={p.dp} />
+                                <p className="search-modal__person__desc-c2">{p.name}</p>
                               </div>
                             ))
                           }
@@ -208,16 +208,16 @@ const Popup = ({ isShareActive, headerTitle, headerDescription, bodyTitle, bodyD
                       ): null
                     }
                   </div>
-                  <div className="search-modal-group">
+                  <div className="search-modal__group">
                     {
                       group.length > 0 ? (
                         <>
-                          <p className="search-modal-group-title">Select a group</p>
+                          <p className="search-modal__group__title">Select a group</p>
                           {
                             group.map(g => (
-                              <div className={group.length == 1 && people.length == 0 ? "search-modal-group-desc search-modal-group-desc--active" : "search-modal-group-desc"}>
-                                <img className="search-modal-group-desc-c1" src={g.dp} />
-                                <p className="search-modal-group-desc-c2">{g.name}</p>
+                              <div className={group.length == 1 && people.length == 0 ? "search-modal__group__desc search-modal__group__desc--active" : "search-modal__group__desc"}>
+                                <img className="search-modal__group__desc-c1" src={g.dp} />
+                                <p className="search-modal__group__desc-c2">{g.name}</p>
                               </div>
                             ))
                           }
@@ -225,8 +225,8 @@ const Popup = ({ isShareActive, headerTitle, headerDescription, bodyTitle, bodyD
                       ): null
                     }
                   </div>
-                  <div className="search-modal-footer">
-                    <button className="search-modal-footer-button" onClick={() => {
+                  <div className="search-modal__footer">
+                    <button className="search-modal__footer-button" onClick={() => {
                       setSearchActive(false)
                       setSelectedEntity([])
                       setSearchText('')

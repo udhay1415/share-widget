@@ -28,8 +28,8 @@ const Pill = ({ title, bgColor, textColor, selectedEntity, setSelectedEntity }: 
       <div className="pill-text">
         <p>{title}</p>
       </div>
-      <button className="pill-close" onClick={() => onClickHandler()}>
-        <img className="pill-close-icon" src={require('../../assets/close-icon.svg')} />
+      <button className="pill__close" onClick={() => onClickHandler()}>
+        <img className="pill__close-icon" src={require('../../assets/close-icon.svg')} />
       </button>
     </div>
   )

@@ -3,19 +3,19 @@
 .popup {
   max-width: 51.2rem;
   max-height: 35.6rem;
-  border: 0.1rem #D1D5DB solid;
+  border: 0.1rem $gray-1 solid;
   margin: 0.5rem 0;
   border-radius: 0.4rem;
   font-family: $primary-font-family;
   overflow-y: scroll;
 }
 
-.popup-header {
+.popup__header {
   display: flex;
   flex-direction: row;
   margin: 1.6rem;
 
-  .popup-header--c1 {
+  .popup__header-c1 {
     width: 4rem;
 
     img {
@@ -26,7 +26,7 @@
     }
   }
 
-  .popup-header--c2 {
+  .popup__header-c2 {
     flex: 1;
     p {
       padding: 0;
@@ -45,7 +45,7 @@
     }
   }
 
-  .popup-header--c3 {
+  .popup__header-c3 {
     width: 10rem;
     display: flex;
     align-items: center;
@@ -53,15 +53,15 @@
   }
 }
 
-.popup-header-line {
+.popup__header-line {
   width: 100%;
   height: 0.1rem;
-  background-color: #D1D5DB;
+  background-color: $gray-1;
   border: none;
 }
 
 .input {
-  border: 0.1rem #D1D5DB solid;
+  border: 0.1rem $gray-1 solid;
   border-radius: 0.4rem;
   margin: 1.6rem;
 
@@ -81,7 +81,7 @@
     padding: 0 0.8rem;
     border-top-left-radius: 0.4rem;
     border-bottom-left-radius: 0.4rem;
-    border: 0.1rem #D1D5DB solid;
+    border: 0.1rem $gray-1 solid;
     width: calc(100% - 2rem);
     border-right: 0;
     outline: none;
@@ -91,11 +91,11 @@
 
   .input-button {
     width: 7.4rem;
-    border-left: 0.1rem #D1D5DB solid;
+    border-left: 0.1rem $gray-1 solid;
     border-top: none;
     border-bottom: none;
     border-right: none;
-    background-color: #F3F4F6;
+    background-color: $gray-2;
     border-top-right-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
     font-family: $primary-font-family;
@@ -106,9 +106,9 @@
 }
 
 .search-modal {
-  &-footer {
+  &__footer {
     height: 3.6rem;
-    background-color: #F3F4F6;
+    background-color: $gray-2;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -129,18 +129,18 @@
       cursor: pointer;
     }
   }
-  .search-modal-person, .search-modal-group {
+  .search-modal__person, .search-modal__group {
     margin: 1.6rem;
-    &-title {
+    &__title {
       font-size: 1.4rem;
       font-weight: 600;
       margin: 1rem 0;
     }
-    &-desc {
+    &__desc {
       display: flex;
       padding: 0.5rem 0;
       &--active {
-        background: #F3F4F6;
+        background: $gray-2;
       }
       &-c1 {
         width: 2.4rem;
